@@ -45,4 +45,8 @@ function renderActivity(recipe) {
 	
 }
 
+/*MIS FUNCIONES - NIVELACION*/
+(function printNews (){
+	$(".callout-news p").append('NUEVAS RECETAS'); //AGREGANDO TEXTO A P
+})()
 

@@ -3,7 +3,6 @@ $(document).ready( function(){
 	renderHighlightedRecipes(recipesArray);
 
 	$(".home .js-back").hide(); //SELECCIONANDO EL DIV JS-BACK DE HOME(INDEX.HTML)
-	$(".recipe .js-menu").hide(); //SELECCIONANDO EL DIV JS-BACK DE RECIPE(RECIPE.HTML)
 
 	renderActivities(activities);
 });

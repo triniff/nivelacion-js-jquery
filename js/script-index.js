@@ -32,7 +32,6 @@ function renderRecipe(recipe) {
 	//console.log('Voy a pintar la receta: ', recipe);
 	var titulo = recipe.name;
 	var autor = recipe.source.name;
-	
 	var imagen = "img/recipes/320x350/" + titulo + ".jpg";
 	$(".list-recipes").append('<a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe">'+ titulo +'</span><span class="metadata-recipe"><span class="author-recipe">' + autor + '</span><span class="bookmarks-recipe"><span class="icon-bookmark"></span> </span></span></span><img src=' + imagen + ' /></a>')
 }

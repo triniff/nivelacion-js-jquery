@@ -3,6 +3,9 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
+	$(".home .js-back").hide(); //SELECCIONANDO EL DIV JS-BACK DE HOME(INDEX.HTML)
+	$(".recipe .js-menu").hide(); //SELECCIONANDO EL DIV JS-BACK DE RECIPE(RECIPE.HTML)
+
 });
 
 

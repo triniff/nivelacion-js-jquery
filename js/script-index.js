@@ -1,11 +1,11 @@
 $(document).ready( function(){
-
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
 	$(".home .js-back").hide(); //SELECCIONANDO EL DIV JS-BACK DE HOME(INDEX.HTML)
 	$(".recipe .js-menu").hide(); //SELECCIONANDO EL DIV JS-BACK DE RECIPE(RECIPE.HTML)
 
+	renderActivities(recipesArray);
 });
 
 
@@ -42,9 +42,11 @@ function renderRecipe(recipe) {
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
-	console.log('Activities: ', activitiesArray);
+	//console.log('Activities: ', activitiesArray);
+	if (activitiesArray.length > 0) {
+		$('.wrapper-message').hide();
+	}
 }
-
 /*
 * Función que se encarga de pintar una actividad
 * Aqui se tiene que crear el HTML que esta en el 

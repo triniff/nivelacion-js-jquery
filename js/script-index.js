@@ -14,7 +14,14 @@ $(document).ready( function(){
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
+	//console.log('Recipes: ', recipesArray);
+	recipesArray.forEach(function(e){
+		var pintado = e.highlighted; //LLAME A CADA ELEMENTO QUE POSEE LA PROPIEDAD "highlighted"
+		if (pintado == true) { //SI ERAN TRUE
+			renderRecipe(pintado); //LLAME A LA FUNCION "renderRecipe"
+		}	
+	})
+	//$(selector).attr(atributo)
 }
 
 /*

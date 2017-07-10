@@ -5,7 +5,7 @@ $(document).ready( function(){
 	$(".home .js-back").hide(); //SELECCIONANDO EL DIV JS-BACK DE HOME(INDEX.HTML)
 	$(".recipe .js-menu").hide(); //SELECCIONANDO EL DIV JS-BACK DE RECIPE(RECIPE.HTML)
 
-	renderActivities(recipesArray);
+	renderActivities(activities);
 });
 
 
@@ -42,10 +42,20 @@ function renderRecipe(recipe) {
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activitiesArray) {
-	//console.log('Activities: ', activitiesArray);
+	console.log('Activities: ', activitiesArray);
 	if (activitiesArray.length > 0) {
 		$('.wrapper-message').hide();
 	}
+	var avatar, name, recipe, text, place, imagen;
+	var imprimir = _(activitiesArray).forEach(function(e){ // underscore.js ??
+		avatar = e.userAvatar;
+		name = e.userName.split(" ")[0];
+		recipe = e.recipeName;
+		text = e.text;
+		place = e.place;
+		imagen = e.image;
+	})
+	$(".list-activities").append('<a href="#" class="item-activity"><span class="attribution"><span class="avatar"><img src="'+ avatar +'")" class="image-avatar"></span><span class="meta"><span class="author">'+ name +'</span> made <span class="recipe">'+ recipe +'</span>:' + text + '<span class="location">&mdash;' + place + '</span></span></span><div class="bg-image" style="background-image: url(' + imagen + ');"></div></a>')
 }
 /*
 * Función que se encarga de pintar una actividad

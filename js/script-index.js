@@ -13,7 +13,7 @@ $(document).ready( function(){
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	//console.log('Recipes: ', recipesArray);
+	console.log('Recipes: ', recipesArray);
 	recipesArray.forEach(function(e){
 		if (e.highlighted == true) { //LLAME A CADA ELEMENTO QUE POSEE LA PROPIEDAD "highlighted", SI ERAN TRUE
 			renderRecipe(e); //LLAME A LA FUNCION "renderRecipe"

@@ -13,4 +13,7 @@ $(document).ready(function(){
   		$(this).addClass("active");
 	});
 	
+	$(".js-back").click(function(){ //AGREGANDO FUNCIONALIDAD BOTON (?)
+		$(".recipe .js-menu").toggle();
+	})
 })

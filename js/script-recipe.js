@@ -4,9 +4,13 @@ $(document).ready(function(){
 
 	$(".js-show-make").click(function() {
   		$(".page").addClass("make");
+  		$(".js-show-recipe").removeClass("active");
+  		$(this).addClass("active");
 	});
 	$(".js-show-recipe").click(function() {
   		$(".page").removeClass("make");
+  		$(".js-show-make").removeClass("active");
+  		$(this).addClass("active");
 	});
 	
 })
